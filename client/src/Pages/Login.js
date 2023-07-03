@@ -20,7 +20,7 @@ export default function Login() {
           <div className='container mt-5'> 
 
 <div class="row">
-    <div class="col-md-6 bg-light rounded shadow d-flex justify-content-center">
+    <div class="col-md-6 bg-light rounded shadow d-flex justify-content-center mb-5">
 
   <form onSubmit={handleSubmit} className='w-100 mt-2'>
       <div class="mb-3">
@@ -51,13 +51,13 @@ export default function Login() {
   </form>
     </div>
 
-    <div class="col-md-5 mb-3 mx-3 mt-3">
+    <div class="col-md-5 mb-3 mx-4 mt-3">
       <div className=''>
     <h1 className='text-center text-danger'>
-      LOG<spin className="text-primary">IN</spin></h1>
+      𝐋𝐎𝐆<spin className="text-primary">𝐈𝐍</spin></h1>
    <hr></hr>
    <p className='fs-6 text'>
-    We are delighted to have you back! Please log in to your account to continue your journey with us. Enter your credentials in the login form and get ready to dive back into our amazing community.
+    𝖶𝖾 𝖺𝗋𝖾 𝖽𝖾𝗅𝗂𝗀𝗁𝗍𝖾𝖽 𝗍𝗈 𝗁𝖺𝗏𝖾 𝗒𝗈𝗎 𝖻𝖺𝖼𝗄! 𝖯𝗅𝖾𝖺𝗌𝖾 𝗅𝗈𝗀 𝗂𝗇 𝗍𝗈 𝗒𝗈𝗎𝗋 𝖺𝖼𝖼𝗈𝗎𝗇𝗍 𝗍𝗈 𝖼𝗈𝗇𝗍𝗂𝗇𝗎𝖾 𝗒𝗈𝗎𝗋 𝗃𝗈𝗎𝗋𝗇𝖾𝗒 𝗐𝗂𝗍𝗁 𝗎𝗌. 𝖤𝗇𝗍𝖾𝗋 𝗒𝗈𝗎𝗋 𝖼𝗋𝖾𝖽𝖾𝗇𝗍𝗂𝖺𝗅𝗌 𝗂𝗇 𝗍𝗁𝖾 𝗅𝗈𝗀𝗂𝗇 𝖿𝗈𝗋𝗆 𝖺𝗇𝖽 𝗀𝖾𝗍 𝗋𝖾𝖺𝖽𝗒 𝗍𝗈 𝖽𝗂𝗏𝖾 𝖻𝖺𝖼𝗄 𝗂𝗇𝗍𝗈 𝗈𝗎𝗋 𝖺𝗆𝖺𝗓𝗂𝗇𝗀 𝗐𝖾𝖻𝗌𝗂𝗍𝖾.
     </p>
 </div>
 

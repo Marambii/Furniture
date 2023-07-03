@@ -14,7 +14,7 @@ export default function Landing() {
           <h1>
             <img width="35" height="35" src="https://img.icons8.com/stencil/32/wardrobe.png" alt="wardrobe" />
             𝐅𝐮𝐫𝐧𝐢𝐭𝐮𝐫𝐞
-            <h6 className='fs-6 fw-lighter mx-4.5'>𝔍𝔬𝔥𝔪𝔲𝔠𝔥 ℭ𝔬𝔪𝔭𝔞𝔫𝔶</h6>
+            <h6 className='fs-6 fw-lighter mx-4.5'>ℭ𝔬𝔫𝔧𝔬𝔟𝔞 ℭ𝔬𝔪𝔭𝔞𝔫𝔶</h6>
           </h1>
           <hr />
           <h1 className='text-danger display-4'>𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 𝗼𝘂𝗿 𝗙𝘂𝗿𝗻𝗶𝘁𝘂𝗿𝗲 𝗦𝘁𝗼𝗿𝗲, <span className='text-warning fw-bolder'> {current_user.username}</span> </h1>
