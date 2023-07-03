@@ -28,7 +28,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_02_185830) do
     t.string "email"
     t.string "password_digest"
     t.string "profile_image"
-    t.boolean "is_admin"
+    t.boolean "is_admin", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
