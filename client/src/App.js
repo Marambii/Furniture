@@ -5,6 +5,8 @@ import Display from './Display/Display';
 import Landing from './Pages/Landing';
 import Home from './Pages/Home';
 import Card from './Pages/Card';
+import Login from './Pages/Login';
+import Register from './Pages/Register';
 
 function App() {
   return (   
@@ -14,7 +16,8 @@ function App() {
        <Route index element = {<Landing/>}/>
        <Route path="Home" element = {<Home/>}/>
        <Route path='Card' element = {< Card/>}/>
-       
+       <Route path='Login' element = {< Login/>}/>
+       <Route path='Register' element = {< Register/>}/>
        </Route>
      </Routes>
    </BrowserRouter>

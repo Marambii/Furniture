@@ -42,7 +42,7 @@ export default function Navbar() {
 
 
             <div className="nav-item mx-2 p-1">
-            <a className="btn rounded-pill bg-danger text-light " >𝙻𝚘𝚐𝚒𝚗</a>
+            <Link to="/Login" className="btn rounded-pill bg-danger text-light " >𝙻𝚘𝚐𝚒𝚗</Link>
           </div>
           </div>
 
