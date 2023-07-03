@@ -2,10 +2,10 @@ class SessionController < ApplicationController
     skip_before_action :authorize, only: [:login]
 
     def login 
-        email = params[:email]
+        username = params[:username]
         password = params[:password]
         
-        user = User.find_by(email: email)
+        user = User.find_by(username: username)
 
         if user && user.authenticate(password)
             session[:user_id]=user.id

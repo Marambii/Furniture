@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     def loggedin_user
         user = User.find_by(id: session[:user_id])
         if user
-            render json: user
+            render json: user, except: [:password_digest]
         else
             render json: {error: "Not logged in"}, status: :not_found
         end        
@@ -15,7 +15,7 @@ class UsersController < ApplicationController
      # All users
     def index
     users = User.all
-    render json: users
+    render json: users, except: [:password_digest]
 
     end
 
@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     def show
         user = User.find_by(id: params[:id]) #value or null
         if user
-            render json: user
+            render json: user, except: [:password_digest]
             
         else
             render json: {error: "User not found"}, status: :not_found
