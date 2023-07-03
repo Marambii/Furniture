@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../context/AuthContext';
 
 export default function Landing() {
+
+  const { current_user} = useContext(AuthContext)
+  
   return (
+
     <div className="container-lg text-center p-5">
       <div className="row">
         <div className="col-md-5 " style={{ minHeight: "30vh" }}>
@@ -12,7 +17,7 @@ export default function Landing() {
             <h6 className='fs-6 fw-lighter mx-4.5'>ℭ𝔬𝔫𝔧𝔬𝔟𝔞 ℭ𝔬𝔪𝔭𝔞𝔫𝔶</h6>
           </h1>
           <hr />
-          <h1 className='text-danger display-4'>𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 𝗼𝘂𝗿 𝗙𝘂𝗿𝗻𝗶𝘁𝘂𝗿𝗲 𝗦𝘁𝗼𝗿𝗲, <span className='text-warning'>𝗝𝗼𝗵𝗻</span> </h1>
+          <h1 className='text-danger display-4'>𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 𝗼𝘂𝗿 𝗙𝘂𝗿𝗻𝗶𝘁𝘂𝗿𝗲 𝗦𝘁𝗼𝗿𝗲, <span className='text-primary fw-bold'> {current_user.username}</span> </h1>
           <figcaption class="">𝒟𝒾𝓈𝒸𝑜𝓋𝑒𝓇 𝓉𝒽𝑒 𝒻𝒾𝓃𝑒𝓈𝓉 𝓈𝑒𝓁𝑒𝒸𝓉𝒾𝑜𝓃 𝑜𝒻 𝒻𝓊𝓇𝓃𝒾𝓉𝓊𝓇𝑒 𝒻𝑜𝓇 𝓎𝑜𝓊𝓇 𝒽𝑜𝓂𝑒.</figcaption>
           <Link to="/Home" className='btn btn-danger text-light rounded-pill w-75 mt-2'>𝙶𝚎𝚝 𝚂𝚝𝚊𝚛𝚝𝚎𝚍</Link>
         </div>
