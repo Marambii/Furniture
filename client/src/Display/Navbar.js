@@ -9,7 +9,7 @@ export default function Navbar() {
         <div className="fs-4">
             <Link to="/" className="nav-link active " href="#" >
           <img width="35" height="35" src="https://img.icons8.com/stencil/32/wardrobe.png" alt="wardrobe" />
-          𝐅𝐮𝐫𝐧𝐢𝐭𝐮𝐫𝐞<h6 className='fs-6 fw-lighter mx-4.5'>𝔍𝔬𝔥𝔪𝔲𝔠𝔥 ℭ𝔬𝔪𝔭𝔞𝔫𝔶</h6>
+          𝐅𝐮𝐫𝐧𝐢𝐭𝐮𝐫𝐞<h6 className='fs-6 fw-lighter mx-4.5'>ℭ𝔬𝔫𝔧𝔬𝔟𝔞 ℭ𝔬𝔪𝔭𝔞𝔫𝔶</h6>
           </Link>
         </div>
 
