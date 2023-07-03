@@ -1,12 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 
-function Register() {
-
-    
-
-
-
+export default function Register() {
   return (
     <div className='p-4 container mt-3'> 
     <div class="row">
@@ -67,8 +61,5 @@ function Register() {
 
 
     </div>
-    
   )
 }
-
-export default Register

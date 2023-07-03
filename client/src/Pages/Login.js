@@ -1,13 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-
-
-function Login() {
-
-    
+export default function Login() {
   return (
-    <div className='container mt-5'> 
+    <div>
+          <div className='container mt-5'> 
 
 <div class="row">
     <div class="col-md-6 bg-light rounded shadow d-flex justify-content-center">
@@ -60,8 +57,6 @@ function Login() {
   </div>
 
  </div>
-    
+    </div>
   )
 }
-
-export default Login
