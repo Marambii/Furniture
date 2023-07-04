@@ -25,6 +25,7 @@ export default function Card() {
             KES <span className="text-danger">{furniture.price}</span>
           </h5>
           <p className="card-text text-center">✨{furniture.category}✨</p>
+          <p className="card-text text-center">✨{furniture.user.username}✨</p>
         </div>
         </div>
       

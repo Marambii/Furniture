@@ -98,7 +98,7 @@ export default function FurnitureProvider({children})
         })
     }
     // Delete Furniture
-    const deletePost = (id) =>{
+    const deleteFurniture = (id) =>{
         fetch(`furnishings/${id}`, {
          method: "DELETE",
                 })
@@ -128,7 +128,7 @@ export default function FurnitureProvider({children})
 
     const contextData ={
         furnitures, 
-        deletePost,
+        deleteFurniture,
         addFurniture,
         editFurniture
     }
