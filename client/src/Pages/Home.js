@@ -12,19 +12,21 @@ export default function Card() {
       { furnitures && furnitures.map((furniture) => (
 
         
-        <Link to={`/furniture/${furniture.id}`} className="card border-light shadow border-bottom rounded-3 bg-light mt-2 hoverable" style={{ width: '18rem' }}>
+        <div  className="card border-light shadow border-bottom rounded-3 bg-light mt-2 hoverable" style={{ width: '18rem' }}>
+          <Link to={`/furniture/${furniture.id}`}>
         <img
           src={furniture.image}
           className="card-img-top roundedd img-fluid border-bottom border-danger"
           alt={furniture.category}
         />
+        </Link>
         <div className="card-body">
           <h5 className="card-title text-bold">
             KES <span className="text-danger">{furniture.price}</span>
           </h5>
           <p className="card-text text-center">✨{furniture.category}✨</p>
         </div>
-        </Link>
+        </div>
       
       ))
   

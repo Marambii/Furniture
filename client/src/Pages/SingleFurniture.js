@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { FurnitureContext } from '../context/FurnitureContext'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import Swal from 'sweetalert2'
 
 export default function SingleFurniture() {
@@ -53,7 +53,7 @@ Swal.fire({
         <p>{furniture && furniture.description}</p>
         
         <button onClick={handleDelete} className="btn btn-sm btn-danger rounded-pill w-75 my-2">DELETE</button>
-        <button href="" className="btn btn-sm btn-danger rounded-pill w-75 my-2">UPDATE</button>
+        <Link to={`/updatefurniture/${id}`}  className="btn btn-sm btn-danger rounded-pill w-75 my-2">UPDATE</Link>
        
       </div>
       </div>

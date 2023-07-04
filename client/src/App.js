@@ -11,6 +11,7 @@ import FurnitureProvider from './context/FurnitureContext';
 import SingleFurniture from './Pages/SingleFurniture';
 import AddFurniture from './Pages/AddFurniture';
 import Profile from './Pages/Profile';
+import UpdateFurniture from './Pages/UpdateFurniture';
 
 function App() {
   return (   
@@ -25,6 +26,7 @@ function App() {
           <Route path='login' element = {< Login/>}/>
           <Route path='Register' element = {< Register/>}/>
           <Route path='addfurniture' element = {< AddFurniture/>}/>
+          <Route path='updatefurniture/:id' element = {< UpdateFurniture/>}/>
           <Route path='profile' element = {< Profile />}/>
           </Route>
         </Routes>
