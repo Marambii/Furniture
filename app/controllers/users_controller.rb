@@ -39,8 +39,7 @@ class UsersController < ApplicationController
             render json: {success: "User created successfully"}, status: :created
 
         else
-            render json: {error: user.errors.full_messages}, status: :unprocessable_entity
-
+            render json: {error: "invalid input. Check and try again"}, status: :unprocessable_entity
         end
     end
 
