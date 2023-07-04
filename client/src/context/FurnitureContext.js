@@ -10,6 +10,45 @@ export default function FurnitureProvider({children})
     const [furnitures, setFurnitures] = useState([])
     const [onChange, setonChange] = useState(true)
 
+    //Edit Furniture
+
+        const editFurniture = ( id, image, price, description, category, user_id ) =>{
+            fetch(`furnishings/${id}`, {
+                method: "PATCH",
+                headers: {"Content-Type":"application/json"},
+                body: JSON.stringify({id, image, price, description, category, user_id })
+            })
+            .then((res)=>res.json())
+            .then((response)=>{
+                console.log(response)
+                if(response.error)
+                {
+                    Swal.fire(
+                        'Error',
+                        response.error,
+                        'error'
+                      )
+                }
+                else if(response.success)
+                { 
+                    nav("/")
+                    Swal.fire(
+                        'Success',
+                        response.success,
+                        'success'
+                      )
+                      setonChange(!onChange)
+                }
+                else{
+                    Swal.fire(
+                        'Error',
+                        "Something went wrong",
+                        'error'
+                      )
+                }
+        
+            })
+        }
     // fetching posts
     useEffect(()=>{
         fetch("/furnishings")
@@ -20,9 +59,46 @@ export default function FurnitureProvider({children})
         })
     }, [onChange])
     
+    // Add Furniture
+    const addFurniture = (image, price, description, category) =>{
+        fetch("/furnishings", {
+            method: "POST",
+            headers: {"Content-Type":"application/json"},
+            body: JSON.stringify({image, price, description, category})
+        })
+        .then((res)=>res.json())
+        .then((response)=>{
+            console.log(response)
+            if(response.error)
+            {
+                Swal.fire(
+                    'Error',
+                    response.error,
+                    'error'
+                  )
+            }
+            else if(response.success)
+            { 
+                nav("/")
+                Swal.fire(
+                    'Success',
+                    response.success,
+                    'success'
+                  )
+                  setonChange(!onChange)
+            }
+            else{
+                Swal.fire(
+                    'Error',
+                    "Something went wrong",
+                    'error'
+                  )
+            }
 
-// Delete Post
-    const deletePost = (id) =>{
+        })
+    }
+    // Delete Furniture
+    const deleteFurniture = (id) =>{
         fetch(`furnishings/${id}`, {
          method: "DELETE",
                 })
@@ -52,7 +128,9 @@ export default function FurnitureProvider({children})
 
     const contextData ={
         furnitures, 
-        deletePost
+        deleteFurniture,
+        addFurniture,
+        editFurniture
     }
 
   return (

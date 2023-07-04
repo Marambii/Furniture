@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { FurnitureContext } from '../context/FurnitureContext'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import Swal from 'sweetalert2'
 
 export default function SingleFurniture() {
   
   const {current_user} = useContext(FurnitureContext)
-  const {deletePost} = useContext(FurnitureContext)
+  const {deleteFurniture} = useContext(FurnitureContext)
 
   const {id} = useParams()
   const [furniture, setFurniture] = useState()
@@ -31,7 +31,7 @@ Swal.fire({
   confirmButtonText: 'Yes, delete it!'
 }).then((result) => {
   if (result.isConfirmed) {
-    deletePost(id)
+    deleteFurniture(id)
     Swal.fire(
       'Deleted!',
       'Your file has been deleted.',
@@ -51,9 +51,11 @@ Swal.fire({
       <h1 className='text-danger'>{furniture && furniture.category}</h1>
       <hr></hr>
         <p>{furniture && furniture.description}</p>
-        
+        <hr></hr>
+          <p>Posted by :{furniture && furniture.user.username}</p>
+        <hr></hr>
         <button onClick={handleDelete} className="btn btn-sm btn-danger rounded-pill w-75 my-2">DELETE</button>
-        <button href="" className="btn btn-sm btn-danger rounded-pill w-75 my-2">UPDATE</button>
+        <Link to={`/updatefurniture/${id}`}  className="btn btn-sm btn-danger rounded-pill w-75 my-2">UPDATE</Link>
        
       </div>
       </div>
