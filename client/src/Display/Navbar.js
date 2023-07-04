@@ -27,18 +27,19 @@ export default function Navbar() {
 
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav ms-auto mb-2 mb-lg-0">
-            <a className="nav-link active mx-5" aria-current="page" href="#">
+            <Link to="/home" className="nav-link active mx-5" aria-current="page" href="#">
   <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/FA5252/home.png" alt="home" className="mb-1" />
   <span class="text-home">𝗛𝗢𝗠𝗘</span>
-</a>
-            <a className="nav-link active mx-5 " href="#">
+</Link>
+            <Link to="/Add" className="nav-link active mx-5 " href="#">
                 <img width="24" height="24" src="https://img.icons8.com/fluency-systems-filled/24/FA5252/add.png" alt="add" className='mb-1'/>
             𝗔𝗗𝗗
-            </a>
-            <a className="nav-link active mx-5 " href="#">
+            </Link>
+
+            <Link to="/Profile" className="nav-link active mx-5 " href="#">
             <img width="24" height="24" src="https://img.icons8.com/ios-glyphs/24/FA5252/test-account.png" alt="test-account" className='mb-1'/>
             𝗣𝗥𝗢𝗙𝗜𝗟𝗘
-            </a>
+            </Link>
 
 
             <div className="nav-item mx-2 p-1">
