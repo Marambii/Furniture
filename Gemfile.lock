@@ -165,7 +165,6 @@ GEM
 
 PLATFORMS
   ruby
-  x86_64-linux
 
 DEPENDENCIES
   active_model_serializers
@@ -178,7 +177,7 @@ DEPENDENCIES
   tzinfo-data
 
 RUBY VERSION
-   ruby 2.7.0p0
+   ruby 2.7.4p191
 
 BUNDLED WITH
-   2.4.13
+   2.1.4

@@ -7,17 +7,19 @@ export default function Card() {
 
   return (
 
-    <div className="container-sm  p-2">
+    <div className="container-fluid p-3 row">
       
       { furnitures && furnitures.map((furniture) => (
 
-        
-        <div  className="card border-light shadow border-bottom rounded-3 bg-light mt-2 hoverable" style={{ width: '18rem' }}>
+        // <div className="container-fluid p-3 row">
+        <div  className="card border-light shadow border-bottom rounded-3 bg-light mt-2 hoverable col-12 col-sm-6 col-md-4 col-lg-3 mb-4" style={{ width: '18rem' }}>
           <Link to={`/furniture/${furniture.id}`}>
         <img
           src={furniture.image}
           className="card-img-top roundedd img-fluid border-bottom border-danger"
           alt={furniture.category}
+          style={{ objectFit: "cover", height: "200px" }}
+
         />
         </Link>
         <div className="card-body">
@@ -28,6 +30,8 @@ export default function Card() {
           <p className="card-text text-center">✨{furniture.user.username}✨</p>
         </div>
         </div>
+        // </div>
+      
       
       ))
   
