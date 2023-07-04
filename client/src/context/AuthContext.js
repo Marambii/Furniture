@@ -58,6 +58,31 @@ export default function AuthProvider({children})
         setCurrentUser()
         setonChange(!onChange)
         console.log(response)
+        if(response.error)
+        {
+            Swal.fire(
+                'Error',
+                response.error,
+                'error'
+              )
+        }
+        else if(response.success)
+        { 
+            nav("/")
+            Swal.fire(
+                'Success',
+                response.success,
+                'success'
+              )
+              setonChange(!onChange)
+        }
+        else{
+            Swal.fire(
+                'Error',
+                "Something went wrong",
+                'error'
+              )
+        }
        })
     }
     // Register
