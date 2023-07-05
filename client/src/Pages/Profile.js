@@ -36,6 +36,11 @@ const { current_user, logout } = useContext(AuthContext);
                                         <p className='fw-bold'>Joined on:</p>
                                         <h6 className='text-muted'>{current_user && current_user.created_at}</h6>
                                     </div>
+                                    <div className='col-sm-6 my-4'>
+                                      <button onClick={() => logout()}className="btn rounded-pill bg-danger text-light ">
+                                        logout
+                                      </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

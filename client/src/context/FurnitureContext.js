@@ -31,7 +31,7 @@ export default function FurnitureProvider({children})
                 }
                 else if(response.success)
                 { 
-                    nav("/")
+                    nav("/furniture")
                     Swal.fire(
                         'Success',
                         response.success,

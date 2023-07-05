@@ -40,6 +40,16 @@ export default function Navbar() {
               />
               <span class="text-home">𝗛𝗢𝗠𝗘</span>
             </Link>
+            <Link to='/furniture' className="nav-link active mx-5" aria-current="page" href="#">
+              <img
+                width="24"
+                height="24"
+                src="https://img.icons8.com/material-rounded/24/FA5252/home.png"
+                alt="home"
+                className="mb-1"
+              />
+              <span class="text-home">FURNITURE</span>
+            </Link>
 
             { current_user && current_user.username ?
 
@@ -65,11 +75,7 @@ export default function Navbar() {
                   />
                   𝗣𝗥𝗢𝗙𝗜𝗟𝗘
                 </Link>
-                <li className="nav-link active mx-5 " href="#">
-                  <button onClick={() => logout()}className="btn rounded-pill bg-danger text-light ">
-                    logout
-                  </button>
-                </li>
+
             </>:
             <>
 
