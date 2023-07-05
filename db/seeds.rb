@@ -19,7 +19,7 @@ User.create!(
 User.create!(
   username: 'John',
   email: 'john@gmail.com',
-  password: 'jjjj',
+  password: 'jjjjj',
   profile_image: 'https://plus.unsplash.com/premium_photo-1670876807290-275ea26f8677?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3N3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60',
   is_admin: false
 )
