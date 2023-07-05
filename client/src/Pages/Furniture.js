@@ -17,7 +17,7 @@ export default function Card() {
             src={furniture.image}
             className="card-img-top roundedd img-fluid border-bottom border-danger"
             alt={furniture.category}
-            style={{ objectFit: "cover", height: "220px" }}
+            style={{ objectFit: "fit", height: "230px" }}
           />
         </Link>
         <div className="card-body">

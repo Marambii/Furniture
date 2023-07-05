@@ -3,6 +3,7 @@ import { FurnitureContext } from '../context/FurnitureContext';
 import { AuthContext } from '../context/AuthContext';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import Rate from './Rate'
 
 export default function SingleFurniture() {
   const { deleteFurniture } = useContext(FurnitureContext);
@@ -44,15 +45,18 @@ export default function SingleFurniture() {
   };
 
   return (
-    <div>
+    
       <div className="container-lg text-center p-5">
         {furniture && furniture.error ? (
           <div>{furniture.error}</div>
         ) : (
           furniture && (
             <div class="row mt-3">
-              <div class="col-md-4">
-                <div className="mt-5">
+              <div class="col-md-6 mt-4">
+                <img src={furniture.image} alt="...." className="w-100 shadow rounded" />
+              </div>
+              <div class="col-md-6">
+                <div className="mt-2">
                   <h1 className="text-danger">{furniture.category}</h1>
                   <hr></hr>
                   <p>{furniture.description}</p>
@@ -66,16 +70,24 @@ export default function SingleFurniture() {
                       <button onClick={handleDelete} className="btn btn-sm btn-danger rounded-pill w-75 my-2">DELETE</button>
                     </>
                   ) : null}
+                  <div className='row mt-3'>
+          <div className='col-md-5'>
+            <ul> start booking<Link to="/Booking" className="btn btn-sm btn-danger rounded-pill w-75 my-2">Booking</Link></ul>
+
+          </div>
+          <div className='col-md-6'>
+          <ul> Rate: <Rate /></ul>     
+          </div>
+        </div>
                 </div>
               </div>
 
-              <div class="col-md-8">
-                <img src={furniture.image} alt="...." className="w-75" />
-              </div>
+              
             </div>
           )
         )}
+
       </div>
-    </div>
+    
   );
 }
