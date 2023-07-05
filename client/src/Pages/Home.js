@@ -5,10 +5,16 @@ import { Link } from 'react-router-dom'
 export default function Card() {
   const { furnitures} = useContext(FurnitureContext)
 
+
+  
+
   return (
 
     
 <div className="container-fluid p-3 d-flex flex-wrap justify-content-center">
+
+  
+
   {furnitures &&
     furnitures.map((furniture) => (
       <div className="card p-3 border-light shadow border-bottom rounded-3 bg-light mt-2 hoverable col-12 col-sm-6 col-md-4 col-lg-3 mx-2 mb-4 my-3" style={{ maxWidth: '18rem' }}>
