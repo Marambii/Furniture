@@ -12,6 +12,7 @@ import SingleFurniture from './Pages/SingleFurniture';
 import AddFurniture from './Pages/AddFurniture';
 import Profile from './Pages/Profile';
 import UpdateFurniture from './Pages/UpdateFurniture';
+import Booking from './Pages/Booking';
 
 function App() {
   return (   
@@ -28,6 +29,7 @@ function App() {
           <Route path='/addfurniture' element = {< AddFurniture/>}/>
           <Route path='/updatefurniture/:id' element = {< UpdateFurniture/>}/>
           <Route path='/profile' element = {< Profile />}/>
+          <Route path='/Booking' element = {< Booking/>}/>
           </Route>
         </Routes>
        </FurnitureProvider>

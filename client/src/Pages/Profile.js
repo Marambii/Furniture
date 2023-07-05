@@ -37,7 +37,7 @@ const { current_user, logout } = useContext(AuthContext);
                                         <h6 className='text-muted'>{current_user && current_user.created_at}</h6>
                                     </div>
                                     <div className='col-sm-6 my-4'>
-                                      <button onClick={() => logout()}className="btn rounded-pill bg-danger text-light ">
+                                      <button onClick={() => logout()}className="btn rounded-pill bg-danger text-light w-50 " >
                                         logout
                                       </button>
                                     </div>

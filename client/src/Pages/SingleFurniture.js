@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { FurnitureContext } from '../context/FurnitureContext'
 import { Link, useParams } from 'react-router-dom'
 import Swal from 'sweetalert2'
+import Rate from './Rate'
 
 export default function SingleFurniture() {
   
@@ -46,23 +47,40 @@ Swal.fire({
     <div>
         <div className="container-lg text-center p-5">
       <div class="row mt-3">
-      <div class="col-md-4">
-        <div className='mt-5'>
-      <h1 className='text-danger'>{furniture && furniture.category}</h1>
+      
+      <div class="col-md-6">
+
+        <img src={furniture && furniture.image} alt='....' className='w-100 rounded shadow'  style={{objectFit: "cover"}}  />
+      </div>
+      <div class="col-md-6">
+        <div className='mt-3 mx-4'>
+      <h1 className='text-danger text-center'>{furniture && furniture.category}</h1>
       <hr></hr>
         <p>{furniture && furniture.description}</p>
         <hr></hr>
           <p>Posted by :{furniture && furniture.user.username}</p>
         <hr></hr>
-        <button onClick={handleDelete} className="btn btn-sm btn-danger rounded-pill w-75 my-2">DELETE</button>
+        {
+          current_user && furniture.user.is_admin === true &&
+          <button onClick={handleDelete} className="btn btn-sm btn-danger rounded-pill w-75 my-2">DELETE</button>
+        }
+
         <Link to={`/updatefurniture/${id}`}  className="btn btn-sm btn-danger rounded-pill w-75 my-2">UPDATE</Link>
+
+        <div className='row mt-3'>
+          <div className='col-md-5'>
+            <ul> start booking<Link to="/Booking" className="btn btn-sm btn-danger rounded-pill w-75 my-2">Booking</Link></ul>
+
+          </div>
+          <div className='col-md-6'>
+          <ul> Rate: <Rate /></ul>     
+          </div>
+        </div>
        
-      </div>
-      </div>
 
-      <div class="col-md-8">
 
-        <img src={furniture && furniture.image} alt='....' className='w-75' />
+
+      </div>
       </div>
     </div>
     </div>

@@ -40,21 +40,25 @@ export default function Navbar() {
               />
               <span class="text-home">𝗛𝗢𝗠𝗘</span>
             </Link>
-            
+
+
 
             { current_user && current_user.username ?
 
             <>
-            <Link to='/furniture' className="nav-link active mx-5" aria-current="page" href="#">
-              <img
-                width="24"
-                height="24"
-                src="https://img.icons8.com/material-rounded/24/FA5252/home.png"
-                alt="home"
-                className="mb-1"
-              />
-              <span class="text-home">FURNITURE</span>
-            </Link>
+            
+
+                <Link to='/furniture' className="nav-link active mx-5" aria-current="page" href="#">
+                  <img
+                    width="23"
+                    height="23"
+                    src="https://img.icons8.com/stencil/32/wardrobe.png"
+                    alt="home"
+                    className="mb-1"
+                  />
+                  <span class="text-home">𝗙𝗨𝗥𝗡𝗜𝗧𝗨𝗥𝗘</span>
+                </Link>
+
                  <Link to='/addfurniture' className="nav-link active mx-5 " href="#">
                   <img
                     width="24"
