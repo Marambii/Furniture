@@ -68,7 +68,7 @@ export default function AuthProvider({children})
         }
         else if(response.success)
         { 
-            nav("/")
+            nav("/Home")
             Swal.fire(
                 'Success',
                 response.success,
@@ -105,7 +105,7 @@ export default function AuthProvider({children})
             }
             else if(response.success)
             { 
-                nav("/")
+                nav("/login")
                 Swal.fire(
                     'Success',
                     response.success,
