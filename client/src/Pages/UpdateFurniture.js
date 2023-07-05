@@ -19,7 +19,7 @@ function UpdateFurniture() {
   const handleSubmit = (e) =>{
     e.preventDefault();
     
-    editFurniture(image, price, description, category, current_user.id)
+    editFurniture(id, image, price, description, category, current_user.id)
 }
 
   return (

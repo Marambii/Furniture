@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { FurnitureContext } from '../context/FurnitureContext'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams, useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2'
 
 export default function SingleFurniture() {
@@ -10,6 +10,7 @@ export default function SingleFurniture() {
 
   const {id} = useParams()
   const [furniture, setFurniture] = useState()
+  const nav = useNavigate()
 
   useEffect(()=>{
   fetch(`/furnishings/${id}`)
@@ -18,33 +19,45 @@ export default function SingleFurniture() {
     setFurniture(response)
   })
  },[])
-
- const handleDelete = ()=>{
-   
-Swal.fire({
-  title: 'Are you sure?',
-  text: "You won't be able to revert this!",
-  icon: 'warning',
-  showCancelButton: true,
-  confirmButtonColor: '#3085d6',
-  cancelButtonColor: '#d33',
-  confirmButtonText: 'Yes, delete it!'
-}).then((result) => {
-  if (result.isConfirmed) {
-    deleteFurniture(id)
-    Swal.fire(
-      'Deleted!',
-      'Your file has been deleted.',
-      'success'
-    )
-  }
-})
-  
- }
+   console.log(furniture)
+ const handleDelete = (e)=>{
+   e.preventDefault()
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        deleteFurniture(id)
+        nav('/furniture')
+        Swal.fire(
+          'Deleted!',
+          'Your file has been deleted.',
+          'success'
+        )
+      }
+    })
+      
+    }
 
   return (
     <div>
         <div className="container-lg text-center p-5">
+
+    {
+      furniture && furniture.error?
+      <>
+      <div>
+      {furniture.error}
+      </div>
+      </>:
+
+   
+    
       <div class="row mt-3">
       <div class="col-md-4">
         <div className='mt-5'>
@@ -54,12 +67,9 @@ Swal.fire({
         <hr></hr>
           <p>Posted by :{furniture && furniture.user.username}</p>
         <hr></hr>
-        {
-          current_user && furniture.user.is_admin === true &&
-          <button onClick={handleDelete} className="btn btn-sm btn-danger rounded-pill w-75 my-2">DELETE</button>
-        }
-
         <Link to={`/updatefurniture/${id}`}  className="btn btn-sm btn-danger rounded-pill w-75 my-2">UPDATE</Link>
+
+        <button onClick={handleDelete} className="btn btn-sm btn-danger rounded-pill w-75 my-2">DELETE</button>
        
       </div>
       </div>
@@ -69,6 +79,8 @@ Swal.fire({
         <img src={furniture && furniture.image} alt='....' className='w-75' />
       </div>
     </div>
+
+}
     </div>
 
     </div>
