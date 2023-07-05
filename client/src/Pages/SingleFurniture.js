@@ -54,7 +54,11 @@ Swal.fire({
         <hr></hr>
           <p>Posted by :{furniture && furniture.user.username}</p>
         <hr></hr>
-        <button onClick={handleDelete} className="btn btn-sm btn-danger rounded-pill w-75 my-2">DELETE</button>
+        {
+          current_user && furniture.user.is_admin === true &&
+          <button onClick={handleDelete} className="btn btn-sm btn-danger rounded-pill w-75 my-2">DELETE</button>
+        }
+
         <Link to={`/updatefurniture/${id}`}  className="btn btn-sm btn-danger rounded-pill w-75 my-2">UPDATE</Link>
        
       </div>
