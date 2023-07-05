@@ -68,7 +68,7 @@ export default function AuthProvider({children})
         }
         else if(response.success)
         { 
-            nav("/Home")
+            nav("/login")
             Swal.fire(
                 'Success',
                 response.success,
