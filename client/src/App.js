@@ -2,7 +2,7 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Display from './Display/Display';
-import Landing from './Pages/Landing';
+import Furniture from './Pages/Furniture';
 import Home from './Pages/Home';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
@@ -20,14 +20,14 @@ function App() {
        <FurnitureProvider>
         <Routes>
           <Route path='/' element={<Display />} >
-          <Route index element = {<Landing/>}/>
-          <Route path="Home" element = {<Home/>}/>
+          <Route index element = {<Home/>}/>
+          <Route path="/furniture" element = {<Furniture/>}/>
           <Route path='/furniture/:id' element = {< SingleFurniture/>}/>
-          <Route path='login' element = {< Login/>}/>
-          <Route path='Register' element = {< Register/>}/>
-          <Route path='addfurniture' element = {< AddFurniture/>}/>
-          <Route path='updatefurniture/:id' element = {< UpdateFurniture/>}/>
-          <Route path='profile' element = {< Profile />}/>
+          <Route path='/login' element = {< Login/>}/>
+          <Route path='/Register' element = {< Register/>}/>
+          <Route path='/addfurniture' element = {< AddFurniture/>}/>
+          <Route path='/updatefurniture/:id' element = {< UpdateFurniture/>}/>
+          <Route path='/profile' element = {< Profile />}/>
           </Route>
         </Routes>
        </FurnitureProvider>
