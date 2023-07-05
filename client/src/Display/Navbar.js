@@ -40,6 +40,11 @@ export default function Navbar() {
               />
               <span class="text-home">𝗛𝗢𝗠𝗘</span>
             </Link>
+            
+
+            { current_user && current_user.username ?
+
+            <>
             <Link to='/furniture' className="nav-link active mx-5" aria-current="page" href="#">
               <img
                 width="24"
@@ -50,10 +55,6 @@ export default function Navbar() {
               />
               <span class="text-home">FURNITURE</span>
             </Link>
-
-            { current_user && current_user.username ?
-
-            <>
                  <Link to='/addfurniture' className="nav-link active mx-5 " href="#">
                   <img
                     width="24"
