@@ -70,7 +70,7 @@ function UpdateFurniture() {
                 <p>You are required to register an account or sign in to access the contents of this page</p>
               </div>
               <div class="modal-footer flex-column border-top-0">
-                <Link to='/signup' type="button" class="btn btn-lg btn-danger w-100 mx-0 mb-2">Sign up</Link>
+                <Link to='/register' type="button" class="btn btn-lg btn-danger w-100 mx-0 mb-2">Sign up</Link>
                 <Link to='/login'type="button" class="btn btn-lg btn-danger w-100 mx-0">Log in</Link>
               </div>
             </div>
