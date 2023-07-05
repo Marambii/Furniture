@@ -28,7 +28,7 @@ User.create!(
   username: 'Muchuku',
   email: 'muchuku@gmail.com',
   password: 'mmmm',
-  profile_image: 'https://images.unsplash.com/photo-1630001254873-b5903049571c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60',
+  profile_image: 'https://media.istockphoto.com/id/471234978/photo/blue-suede-armchair.jpg?s=612x612&w=0&k=20&c=AEoiNSABYmy9ghK7C0wRpBooGWVS4vnrzgFfxuBk6qg=',
   is_admin: true
 )
 

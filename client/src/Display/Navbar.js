@@ -30,7 +30,7 @@ export default function Navbar() {
 
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-            <Link to='/' className="nav-link active mx-5" aria-current="page" href="#">
+            <Link to='/Home' className="nav-link active mx-5" aria-current="page" href="#">
               <img
                 width="24"
                 height="24"
