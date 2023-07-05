@@ -13,7 +13,7 @@ export default function FurnitureProvider({children})
     //Edit Furniture
 
         const editFurniture = ( id, image, price, description, category, user_id ) =>{
-            fetch(`furnishings/${id}`, {
+            fetch(`/furnishings/${id}`, {
                 method: "PATCH",
                 headers: {"Content-Type":"application/json"},
                 body: JSON.stringify({id, image, price, description, category, user_id })
@@ -99,14 +99,14 @@ export default function FurnitureProvider({children})
     }
     // Delete Furniture
     const deleteFurniture = (id) =>{
-        fetch(`furnishings/${id}`, {
+        fetch(`/furnishings/${id}`, {
          method: "DELETE",
                 })
         .then((res)=>res.json())
         .then((response)=>{
               if(response.success)
               {
-                nav("/")
+                nav("/furniture")
                 Swal.fire(
                     'Success',
                     response.success,

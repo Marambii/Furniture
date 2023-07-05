@@ -4,7 +4,7 @@ import { AuthContext } from "../context/AuthContext";
 export default function Profile() {
 
 const { current_user, logout } = useContext(AuthContext);
-  console.log(current_user)
+//   console.log(current_user)
 
   return (
     <div>
