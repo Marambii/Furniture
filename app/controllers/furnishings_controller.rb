@@ -50,10 +50,10 @@ class FurnishingsController < ApplicationController
 
         if furniture
             furniture.destroy
-            render json: {success: "Furniture deleted successfully"}, status: :no_content
+            render json: {"success": "Furniture deleted successfully"}, status: :created
 
         else
-            render json: {error: "Furniture you are trying to delete does not exist"}, status: :not_found
+            render json: {"error": "Furniture you are trying to delete does not exist"}, status: :not_found
         end
     end
 end
