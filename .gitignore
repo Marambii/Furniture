@@ -27,3 +27,4 @@
 /config/master.key
 Gemfile
 .ruby-version
+activejob

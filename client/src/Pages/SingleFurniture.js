@@ -70,11 +70,8 @@ export default function SingleFurniture() {
                       <button onClick={handleDelete} className="btn btn-sm btn-danger rounded-pill w-75 my-2">DELETE</button>
                     </>
                   ) : null}
-                  <div className='row mt-3'>
-          <div className='col-md-5'>
-            <ul> start booking<Link to="/Booking" className="btn btn-sm btn-danger rounded-pill w-75 my-2">Booking</Link></ul>
-
-          </div>
+              
+          
           <div className='col-md-6'>
           <ul> Rate: <Rate /></ul>     
           </div>
@@ -83,7 +80,7 @@ export default function SingleFurniture() {
               </div>
 
               
-            </div>
+            
           )
         )}
 
