@@ -33,5 +33,5 @@ gem 'faker', '~> 3.2'
 
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-
+gem 'pg', '~> 1.5', '>= 1.5.3'
 gem 'active_model_serializers'
