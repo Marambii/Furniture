@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   delete "/logout", to:"session#logout"
   get "/current_user", to:"users#loggedin_user"
 
+
+  get "*parts", to:'react#index'
+
 end
