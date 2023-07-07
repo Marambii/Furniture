@@ -10,8 +10,8 @@ default: &default
   timeout: 5000
 
 development:
-   url: postgresql://furnituredb_n4k9_user:Oy6N7oKB4qxJOlasUAfm6WnESf9JNcDw@dpg-ciiqdcunqql0tc6ffhb0-a/furnituredb_n4k9
-  #  url: postgresql://furnituredb_n4k9_user:Oy6N7oKB4qxJOlasUAfm6WnESf9JNcDw@dpg-ciiqdcunqql0tc6ffhb0-a.oregon-postgres.render.com/furnituredb_n4k9
+  #url: postgresql://furnituredb_n4k9_user:Oy6N7oKB4qxJOlasUAfm6WnESf9JNcDw@dpg-ciiqdcunqql0tc6ffhb0-a/furnituredb_n4k9
+   url: postgresql://furnituredb_n4k9_user:Oy6N7oKB4qxJOlasUAfm6WnESf9JNcDw@dpg-ciiqdcunqql0tc6ffhb0-a.oregon-postgres.render.com/furnituredb_n4k9
   # <<: *default
   # database: db/development.sqlite3
 
