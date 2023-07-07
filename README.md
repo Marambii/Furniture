@@ -4,7 +4,7 @@ This project was developed from both the frontend and the backend using react an
 ### Link to our Project[https://furniture-lsmt.onrender.com/]
 
 
-Furniture app is a program that allows a user to view and rate available funiture and add a furniture by posting it. They can also update the furniture incase they need to change the image or the name. A user can also delete the product they have posted. This application allows for user login rights and our admin rights which contains different priviledges.  The following is what is entailed:
+Furniture app is a program that allows a user to view and rate available furniture and add furniture by posting it. They can also update the furniture in case they need to change the image or the name. A user can also delete the product they have posted. This application allows for user login rights and our admin rights which contain different privileges.  The following is what is entailed:
 
 # Available Scripts
 In the project directory run the following commands:
@@ -20,14 +20,14 @@ In our directory *cd client*  and run npm install, then npm install sweetalert2.
 # Branches
 The project was built from different branches that were merged to ensure its success.
 # Project details
-This project merged the frontend and the backend. It contains models and controllers which are important for its functionality as follows;
+This project merged the front end and the back end. It contains models and controllers which are important for its functionality as follows;
 
 # Models
 # Furnishing
-Furnishing model deals with validation of the furniture and the relationship with user tables.
+The Furnishing model deals with the validation of the furniture and the relationship with user tables.
 
 # user
-User model validates the user and the relationship of the furniture
+The User model validates the user and the relationship between the furniture
 
 # Controllers
 # Furnishing_controller
@@ -39,36 +39,34 @@ Defines the session login and logout
 # User_controller
 Defines the method to manipulate our user while considering the CRUD functionality.
 
-# Running Furniture App in the browser.
-The following are the instructions to consider when running the furniture app project in your machine.
+# Running Furniture App locally.
+The following are the instructions to consider when running the furniture app project on your machine.
+First, make sure to clone this repository  bundle install and npm install
 In your directory run the rails server using the rails s command which opens http://localhost:3000 
-
-Open another terminal and run  npm start --prefix client
-Running this opens http://localhost:4000 in the browser.
 
 # Navigating through the Furniture app
 Once your server is running, the next step is accessing the content in our project. 
 # User Navigation
 # Login
-The first action is to register and login by clicking at the login button at the navbar. The login has a link that redirects to the register page key in the details,register then login.
-After successfull login
+The first action is to register and log in by clicking on the login button at the navbar. The login has a link that redirects to the register page key in the details, register then login.
+After successful login
 You will see a welcome message with the username to our furniture app.
-click on get started button which redirects you to furniture page.
+click on Get started button which redirects you to the furniture page.
 # Furniture page
-The furniture page allows a user to choose their seat of preference and by clicking on the image which redirects you to another page where you will see the seat image and a place on where to rate it.
+The furniture page allows a user to choose their seat of preference by clicking on the image which redirects you to another page where you will see the seat image and a place on where to rate it.
 # Add Furniture
-By clicking the add furniture button, it redirects a user to another page where they can key in the seat details, the image and the price. Only a user who Adds a furniture can update the furniture details and they can also delete the furniture they have added.
+By clicking the add furniture button, it redirects a user to another page where they can key in the seat details, the image, and the price. Only a user who Adds furniture can update the furniture details and they can also delete the furniture they have added.
 
 # Administrator Navigation
 # Login
-The administrator has to login to the application, in our case we have an admin named muchuku
-# Administrator priviledges
+The administrator has to login to the application, in our case we have an admin named Muchuku
+# Administrator privileges
 At the furniture, once an admin clicks on an image they are given the option of either updating the furniture or deleting it. Only the admin can delete any information posted by the users.  
 
 # Github pages link : 
 
 # Authors
-Github name: ConsolattaChepchirchir
+GitHub name: ConsolattaChepchirchir
 Email: tuweiconsolatta@gmail.com
 
 Github name: JohnMuchuku
