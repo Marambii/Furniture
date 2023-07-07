@@ -1,6 +1,8 @@
 # FURNITURE APP
 This project was developed from both the frontend and the backend using react and rails respectively.
 
+link to our site [https://furniture-lsmt.onrender.com/]
+
 # Available Scripts
 In the project directory run the following commands:
 # Bundle install
