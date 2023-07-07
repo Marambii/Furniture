@@ -1,6 +1,9 @@
 # FURNITURE APP
 This project was developed from both the frontend and the backend using react and rails respectively.
 
+### Link to our Project[https://furniture-lsmt.onrender.com/]
+
+
 Furniture app is a program that allows a user to view and rate available funiture and add a furniture by posting it. They can also update the furniture incase they need to change the image or the name. A user can also delete the product they have posted. This application allows for user login rights and our admin rights which contains different priviledges.  The following is what is entailed:
 
 # Available Scripts
