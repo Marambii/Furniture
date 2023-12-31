@@ -75,6 +75,9 @@ By clicking the add furniture button, it redirects a user to another page where 
 ### Github name: Marambii
 ### Email:marambib2019@gmail.com
 
+### Github name: Timonditi
+### Email: todongoonditi@gmail.com
+
 # MIT License
 
 Copyright (c) 2023 Baruch Marambi,John Muchuku, Consolatta Tuwei
